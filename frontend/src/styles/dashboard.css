@@ -1,0 +1,121 @@
+.app-shell {
+  min-height: 100vh;
+  background: var(--clinical-warm);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: var(--ink);
+  color: white;
+}
+
+.navbar-brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.navbar-brand span {
+  color: var(--crimson);
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 13px;
+  color: #c3c9d4;
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid #3a4152;
+  color: #e5e8ee;
+  padding: 7px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+}
+
+.btn-ghost:hover {
+  border-color: var(--crimson);
+  color: white;
+}
+
+.dashboard-content {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+  margin-bottom: 20px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--font-mono);
+}
+
+.badge-available {
+  background: #e6f4f3;
+  color: var(--teal-dim);
+}
+
+.badge-unavailable {
+  background: #f1f2f4;
+  color: var(--text-muted);
+}
+
+.badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.stat-box {
+  background: var(--clinical);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+}
+
+.stat-box-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.stat-box-value {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  margin-top: 4px;
+}

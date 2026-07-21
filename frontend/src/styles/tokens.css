@@ -1,0 +1,103 @@
+/*
+  Design language: "Vital Signs"
+  ------------------------------------------------------------
+  This isn't a generic med-tech app — it's built around the idea of a
+  pulse: a donor's availability is a live signal, not a static record.
+  The ECG line is the signature motif, used sparingly as a section
+  divider and a loading/live indicator, never as decoration.
+
+  Palette:
+    --ink        #14181F   near-black charcoal-navy, primary text/bg
+    --crimson    #C81E3A   blood red, primary action color
+    --crimson-dim#8E1229   pressed/hover state for crimson
+    --clinical   #EEF2F1   cool off-white (not cream), light surfaces
+    --teal       #0E7C7B   medical trust accent, links/secondary actions
+    --amber      #E8A33D   urgent/emergency state
+    --line       #DDE3E1   hairline borders on light surfaces
+
+  Type:
+    Display — Fraunces (variable slab serif, used at large sizes only)
+    Body    — Inter
+    Utility — IBM Plex Mono (IDs, blood group codes, coordinates, stats)
+*/
+
+:root {
+  --ink: #14181f;
+  --ink-soft: #232936;
+  --crimson: #c81e3a;
+  --crimson-dim: #8e1229;
+  --clinical: #eef2f1;
+  --clinical-warm: #f7f8f7;
+  --teal: #0e7c7b;
+  --teal-dim: #0a5a59;
+  --amber: #e8a33d;
+  --line: #dde3e1;
+  --line-dark: #2c3340;
+  --text-muted: #6b7280;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+
+  --shadow-card: 0 1px 2px rgba(20, 24, 31, 0.04), 0 8px 24px rgba(20, 24, 31, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--clinical-warm);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  letter-spacing: 0.01em;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+a {
+  color: var(--teal);
+}
+
+/* Focus states — always visible, never removed */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
